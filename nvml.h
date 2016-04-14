@@ -97,11 +97,11 @@ extern "C" {
  */
 #define NVML_API_VERSION            7
 #define NVML_API_VERSION_STR        "7"
-#define nvmlInit                    nvmlInit_v2
+//#define nvmlInit                    nvmlInit_v2
 #define nvmlDeviceGetPciInfo        nvmlDeviceGetPciInfo_v2
-#define nvmlDeviceGetCount          nvmlDeviceGetCount_v2
-#define nvmlDeviceGetHandleByIndex  nvmlDeviceGetHandleByIndex_v2
-#define nvmlDeviceGetHandleByPciBusId nvmlDeviceGetHandleByPciBusId_v2
+//#define nvmlDeviceGetCount          nvmlDeviceGetCount_v2
+//#define nvmlDeviceGetHandleByIndex  nvmlDeviceGetHandleByIndex_v2
+//#define nvmlDeviceGetHandleByPciBusId nvmlDeviceGetHandleByPciBusId_v2
 
 /***************************************************************************************************/
 /** @defgroup nvmlDeviceStructs Device Structs

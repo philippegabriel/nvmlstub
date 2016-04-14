@@ -1,6 +1,9 @@
 #include <string.h>
 #include "nvml.h"
 const DECLDIR char* nvmlErrorString(nvmlReturn_t result);
+nvmlReturn_t DECLDIR nvmlInit_v2(void){
+return NVML_SUCCESS;
+}
 nvmlReturn_t DECLDIR nvmlInit(void){
 return NVML_SUCCESS;
 }
