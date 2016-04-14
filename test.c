@@ -29,5 +29,7 @@ printf("Called %s return=%d,%d,%d\n","nvmlDeviceGetUtilizationRates",ret,utiliza
 nvmlEnableState_t mode;
 ret=nvmlDeviceSetPersistenceMode(device,mode);
 printf("Called %s return=%d\n","nvmlDeviceSetPersistenceMode",ret);
+nvmlReturn_t result;
+printf("Called %s return=%s\n","nvmlErrorString",nvmlErrorString(result));
 return 0;
 }

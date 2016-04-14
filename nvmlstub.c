@@ -53,5 +53,5 @@ nvmlReturn_t DECLDIR nvmlDeviceSetPersistenceMode(nvmlDevice_t device, nvmlEnabl
 return NVML_SUCCESS;
 }
 const DECLDIR char* nvmlErrorString(nvmlReturn_t result){
-
+return "hello";
 }
