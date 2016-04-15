@@ -11,7 +11,7 @@ nvmlReturn_t DECLDIR nvmlShutdown(void){
 return NVML_SUCCESS;
 }
 nvmlReturn_t DECLDIR nvmlDeviceGetCount(unsigned int *deviceCount){
-*deviceCount=22;
+*deviceCount=5;
 return NVML_SUCCESS;
 }
 nvmlReturn_t DECLDIR nvmlDeviceGetHandleByIndex(unsigned int index, nvmlDevice_t *device){
@@ -25,13 +25,13 @@ memory->used=8000;
 return NVML_SUCCESS;
 }
 nvmlReturn_t DECLDIR nvmlDeviceGetPciInfo(nvmlDevice_t device, nvmlPciInfo_t *pci){
-strcpy(pci->busId,"1:1:1 Test"); //!< The tuple domain:bus:device.function PCI identifier (&amp; NULL terminator)
+strcpy(pci->busId,"1:1:1 mocknvml"); //!< The tuple domain:bus:device.function PCI identifier (&amp; NULL terminator)
 pci->domain=1;             //!< The PCI domain on which the device's bus resides, 0 to 0xffff
 pci->bus=1;                //!< The bus on which the device resides, 0 to 0xff
 pci->device=0xbe;             //!< The device's id on the bus, 0 to 31
-pci->pciDeviceId=0xbeef;        //!< The combined 16-bit device id and 16-bit vendor id
+pci->pciDeviceId=0x0ff210de;        //!< The combined 16-bit device id and 16-bit vendor id
 // Added in NVML 2.285 API
-pci->pciSubSystemId=0xdead;     //!< The 32-bit Sub System Device ID
+pci->pciSubSystemId=0x01;     //!< The 32-bit Sub System Device ID
 // NVIDIA reserved for internal use only
 pci->reserved0=0;
 pci->reserved1=0;
@@ -56,5 +56,5 @@ nvmlReturn_t DECLDIR nvmlDeviceSetPersistenceMode(nvmlDevice_t device, nvmlEnabl
 return NVML_SUCCESS;
 }
 const DECLDIR char* nvmlErrorString(nvmlReturn_t result){
-return "hello";
+return "BaconOvercookedSystemError";
 }
