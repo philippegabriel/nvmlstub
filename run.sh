@@ -1,10 +1,12 @@
+#!/bin/bash
+set -e
 while true
 do
-service xcp-rrdd-gpumon start
-[ $? -ne 0 ] && exit $?
-sleep 2
-#perl -e 'select(undef,undef,undef,.3)'
-service xcp-rrdd-gpumon stop
-[ $? -ne 0 ] && exit $?
-perl -e 'select(undef,undef,undef,.3)'
+service xcp-rrdd-gpumon start >> run.log 2>&1
+a=`pidof xcp-rrdd-gpumon`
+#echo $a
+strace -q -tt -T -f -p $a >> run.log 2>&1 &
+sleep ${RANDOM:0:1}
+service xcp-rrdd-gpumon stop >> run.log 2>&1
 done
+
